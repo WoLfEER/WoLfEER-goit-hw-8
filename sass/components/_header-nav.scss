@@ -1,0 +1,92 @@
+.header__nav {
+    display: flex;
+    align-items: center;
+}
+
+.side-nav {
+    display: flex;
+    margin-left: 93px;
+}
+
+.side-nav__item+.side-nav__item {
+    margin-left: 50px;
+}
+
+.side-nav__link {
+    display: block;
+
+    color: var(--primary-text-color);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover,
+        &:focus {
+        color: var(--accent-color);
+}
+}
+
+.side-nav__link--current {
+    color: var(--accent-color);
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+.side-nav__link--current::after {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+    content: "";
+    background-color: var(--accent-color);
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+}
+
+.login-nav {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+
+.login-nav__item+.login-nav__item {
+    margin-left: 50px;
+}
+
+.login-nav__link--mail {
+    color: var(--secondary-text-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    &:hover .login-nav__icon--mail,
+    &:hover,
+    &:focus .login-nav__icon--mail,
+    &:focus {
+         fill: var(--accent-color);
+         color: var(--accent-color);
+        }
+}
+
+.login-nav__icon--mail {
+    fill: var(--secondary-text-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-right: 10px;
+}
+
+.login-nav .link {
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    align-items: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+

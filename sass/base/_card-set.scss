@@ -1,0 +1,3 @@
+.card-set-item {
+    flex-basis: calc(100% - ((var(--card-item)) - 1) * var(--card-gap) / var(--card-item));
+}
