@@ -1,5 +1,9 @@
 .works {
+    display: none;
+ @include mq(desc) {
+     display: flex;
     padding-top: 0;
+    }  
 }
 
 .works__title {
@@ -16,11 +20,12 @@
 }
 
 .works__item {
-    flex-basis: calc((100% - 2 * 30px) / 3);
     margin: 15px;
-        position: relative;
+    position: relative;
+    @include flex-basis (3);
+    
 }
-s
+
 .works__background {
     position: absolute;
 

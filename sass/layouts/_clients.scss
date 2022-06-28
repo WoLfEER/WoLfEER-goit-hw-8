@@ -1,16 +1,28 @@
 .clients__list {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap:30px;
 }
 
-.clients__item + .clients__item {
-    margin-left: 30px;
-}
+.clients__item {
+    @include mq(mob);
+        @include flex-basis(2);
+    @include mq(tab) {
+        @include flex-basis (3);
+    }
+    @include mq(desc) {
+        @include flex-basis (6);
+    }
+ }
+
 
 .clients__link {
     display: flex;
     border: 1px solid #afb1b8;
     border-radius: 4px;
-    width: 170px;
+    width: 100%;
     height: 92px;
     justify-content: center;
     align-items: center;
@@ -23,7 +35,7 @@
         &:focus {
             border: 1px solid var(--accent-color);
             transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-                        }
+    }
 }
     
 .clients__icon {

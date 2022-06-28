@@ -1,10 +1,90 @@
 .team {
     background-color: var(--secondary-banner-color);
-    /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
+    text-align: center;
 }
 
 .team-list {
-    display: flex;
-    justify-content: center;
-    margin-top: 16px;
-}
+    @include mq(mob-only) {
+        margin-bottom: -30px;
+      }
+      @include mq(tab) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-bottom: 0;
+      }
+    }
+
+
+    
+
+.team .team-item {
+    background-color: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  @include mq(mob-only) {
+    margin-bottom: 30px;
+  }
+  @include mq(tab) {
+    margin-bottom: 0;
+    @include flex-basis(2);
+  }
+  @include mq(desc) {
+    @include flex-basis(4);
+  }
+    }
+    
+    .team-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        width: 44px;
+        height: 44px;
+        fill: var(--unactive-color);
+        border-radius: 50%;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .team-link:hover,
+    .team-link:focus {
+        background-color: var(--accent-color);
+        fill: #ffffff;
+    }
+
+
+    .team-card {
+        padding: 30px 10px;  
+    }
+    
+    
+    
+    .team-title {
+        color: var(--primary-text-color);
+    
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.18;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .team-par {
+        color: var(--secondary-text-color);
+        font-size: 16px;
+        line-height: 1.18;
+        text-align: center;
+    }
+
+    .soc-list-item + .soc-list-item {
+        margin-left: 10px;
+    }
+    
+    
+    .social-list {
+        @include centered;
+    }
+    
+
