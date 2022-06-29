@@ -1,15 +1,14 @@
-header {
+.header {
     border-bottom: 1px solid #ececec;
 }
 
-.background {
-    margin-right: 0;
-    margin-left: 0;
-    margin: auto;
-    max-width: 1600px;
-    height: 600px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)),
-        url(../images/team-banner.jpg);
+.header__nav {
+    display: flex;
+    align-items: center;
+
+        justify-content: space-between;
+    
 }
+
+
 

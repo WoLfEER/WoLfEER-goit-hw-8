@@ -81,3 +81,12 @@
                         cursor: pointer;
                     }
                 }
+.header__btn {
+    display: flex;
+    border: none;
+    background-color: transparent;
+    @include mq(tab) {
+        display: none;
+    }
+}
+               

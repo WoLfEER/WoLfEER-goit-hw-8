@@ -37,7 +37,7 @@ a {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -112,14 +112,15 @@ body {
   overflow: hidden;
 }
 
-.header__nav {
-  display: flex;
-  align-items: center;
+.side-nav {
+  display: none;
 }
 
-.side-nav {
-  display: flex;
-  margin-left: 93px;
+@media (min-width: 768px) {
+  .side-nav {
+    display: flex;
+    margin-left: 93px;
+  }
 }
 
 .side-nav__item + .side-nav__item {
@@ -161,21 +162,48 @@ body {
 }
 
 .login-nav {
-  display: flex;
-  margin-left: auto;
-  align-items: center;
+  display: none;
 }
 
-.login-nav__item + .login-nav__item {
-  margin-left: 50px;
+@media (min-width: 768px) {
+  .login-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .login-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .login-nav__item + .login-nav__item {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .login-nav__item + .login-nav__item {
+    margin-left: 50px;
+  }
 }
 
 .login-nav__link--mail {
+  display: flex;
+  align-items: center;
   color: var(--secondary-text-color);
   text-decoration: none;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.02em;
 }
 
@@ -183,6 +211,13 @@ body {
 .login-nav__link--mail:focus .login-nav__icon--mail, .login-nav__link--mail:focus {
   fill: var(--accent-color);
   color: var(--accent-color);
+}
+
+@media (min-width: 1200px) {
+  .login-nav__link--mail {
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 
 .login-nav__icon--mail {
@@ -209,7 +244,15 @@ body {
 
 .footer-soc__list {
   display: flex;
-  margin-top: 20px;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+@media (min-width: 1200px) {
+  .footer-soc__list {
+    margin-bottom: 0;
+    margin-top: 20px;
+  }
 }
 
 .footer-soc__link {
@@ -225,6 +268,10 @@ body {
 
 .footer-soc__link:hover, .footer-soc__link:focus {
   background-color: var(--accent-color);
+}
+
+.footer-soc__item {
+  margin-top: 20px;
 }
 
 .footer-soc__item + .footer-soc__item {
@@ -252,12 +299,19 @@ body {
 
 .subscribe__form {
   display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1200px) {
+  .subscribe__form {
+    flex-direction: row;
+  }
 }
 
 .subscribe__input {
   display: flex;
   padding-left: 16px;
-  width: 358px;
+  width: 100%;
   height: 50px;
   font-size: 16px;
   line-height: 1.25;
@@ -267,6 +321,23 @@ body {
   background-color: var(--banner-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   margin-right: 12px;
+  margin-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+  .subscribe__input {
+    width: 450px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .subscribe__input {
+    width: 358px;
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
 }
 
 .subscibe__icon {
@@ -283,16 +354,6 @@ body {
 
 /* portfolio css */
 /* button-nav */
-.button-nav {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-
-.button-nav .item + .item {
-  margin-left: 8px;
-}
-
 .footer__logo {
   display: inline-block;
   color: var(--accent-color);
@@ -319,12 +380,35 @@ body {
 
 .button-nav {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  gap: 8px;
+  justify-content: start;
 }
 
-.button-nav .button-nav .item + .item {
-  margin-left: 8px;
+@media (min-width: 480px) {
+  .button-nav {
+    margin-top: -15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .button-nav {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .button-nav {
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: 480px) {
+  .button__item {
+    margin-top: 15px;
+  }
 }
 
 .button--primary {
@@ -402,22 +486,47 @@ body {
   cursor: pointer;
 }
 
+.header__btn {
+  display: flex;
+  border: none;
+  background-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .header__btn {
+    display: none;
+  }
+}
+
 .section {
   padding-bottom: 94px;
   padding-top: 94px;
 }
 
-header {
+.mobile-menu {
+  background-color: tomato;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.mobile-menu .is-open {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.header {
   border-bottom: 1px solid #ececec;
 }
 
-.background {
-  margin-right: 0;
-  margin-left: 0;
-  margin: auto;
-  max-width: 1600px;
-  height: 600px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/team-banner.jpg);
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .hero {
@@ -503,7 +612,6 @@ header {
   background-size: 70px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
 }
 
 .advantages__item--diagram::before {
@@ -737,17 +845,54 @@ header {
 
 .footer {
   background-color: var(--banner-color);
-  padding-top: 60px;
   padding-bottom: 60px;
+  padding-top: 60px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }
 
 .footer__address {
-  display: flex;
-  align-items: baseline;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .footer__address {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+@media (min-width: 768px) {
+  .try-flex {
+    justify-content: center;
+    display: flex;
+  }
 }
 
 .footer_wrapper {
-  margin-right: 70px;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+@media (min-width: 768px) {
+  .footer_wrapper {
+    align-items: center;
+    margin-right: 165px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer_wrapper {
+    margin-right: 70px;
+    margin-bottom: 0;
+  }
 }
 
 .footer__link {
@@ -791,6 +936,11 @@ header {
   }
 }
 
+.image__subtitle {
+  position: relative;
+  overflow: hidden;
+}
+
 .card__subtitle {
   color: var(--secondary-text-color);
   font-size: 12px;
@@ -815,13 +965,9 @@ header {
   }
 }
 
-.image__subtitle {
-  position: relative;
-  overflow: hidden;
-}
-
 .image__title {
   position: absolute;
+  top: 0;
   margin: 0;
   font-size: 18px;
   line-height: 1.56;

@@ -1,16 +1,18 @@
-.header__nav {
-    display: flex;
-    align-items: center;
-}
+
 
 .side-nav {
-    display: flex;
-    margin-left: 93px;
+    display: none;
+    @include mq(tab) {
+        display: flex;
+        margin-left: 93px;
+    }
+   
 }
 
-.side-nav__item+.side-nav__item {
-    margin-left: 50px;
-}
+.side-nav__item + .side-nav__item {
+        margin-left: 50px;
+    
+ }
 
 .side-nav__link {
     display: block;
@@ -51,21 +53,43 @@
 }
 
 .login-nav {
-    display: flex;
-    margin-left: auto;
-    align-items: center;
+    display: none;
+    @include mq(tab) { 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-left: auto;
+}
+    @include mq (desc) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        
+    }
 }
 
-.login-nav__item+.login-nav__item {
-    margin-left: 50px;
+
+
+.login-nav__item + .login-nav__item {
+    @include mq (tab) {
+        margin-top: 10px;
+    }
+    @include mq(desc) {
+        margin-left: 50px;
+    }
+
 }
 
 .login-nav__link--mail {
+    display: flex;
+    align-items: center;
     color: var(--secondary-text-color);
     text-decoration: none;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 12px;
+    line-height: 1.16;
     letter-spacing: 0.02em;
     &:hover .login-nav__icon--mail,
     &:hover,
@@ -74,7 +98,11 @@
          fill: var(--accent-color);
          color: var(--accent-color);
         }
-}
+        @include mq(desc) {
+            font-size: 14px;
+            line-height: 1.14;    
+        }
+    }
 
 .login-nav__icon--mail {
     fill: var(--secondary-text-color);

@@ -1,22 +1,54 @@
 .footer {
     background-color: var(--banner-color);
-        padding-top: 60px;
-            padding-bottom: 60px;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    margin: 0 auto;
+    @include mq(tab-only) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around; }
+    // @include mq(tab) {
+    // padding-left: 60px;
+
 }
 
 
 .footer__address {
-    display: flex;
+    text-align: center;
+    @include mq(desc) {
+       display: flex;
     align-items: baseline;
+
+
+    }
+}
+
+.try-flex {
+    @include mq(tab) {
+        justify-content: center;
+        display: flex;
+    }
+
 }
 
 .footer_wrapper {
-    margin-right: 70px;
+    text-align: center;
+    margin-bottom: 70px;
+    @include mq (tab) {
+        align-items: center;
+        margin-right: 165px;
+    }
+    @include mq (desc) {
+     margin-right: 70px;
+     margin-bottom: 0;
+    }
+   
 }
+
 
 .footer__link {
     color: #ffffff;
-
+   
     text-decoration: none;
     font-style: normal;
     font-size: 14px;

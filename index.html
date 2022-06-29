@@ -22,12 +22,13 @@
 
   <body>
     <!-- HEADER-->
-    <!-- <header class="header">
+<header class="header">
       <div class="header__nav container">
         <nav class="header__nav">
           <a href="./" class="logo">
             Web<span class="logo--black">Studio</span>
           </a>
+        
 
           <ul class="side-nav">
             <li class="side-nav__item">
@@ -43,6 +44,11 @@
             </li>
           </ul>
         </nav>
+        <button class="mobile-menu-button" type="button" data-menu-open>
+          <svg class="mobile-menu__icon" width = "40px" height ="40px">
+            <use href ="./images/icons.svg#burger"></use>
+          </svg>
+        </button>
         <ul class="login-nav">
           <li class="login-nav__item">
             <a href="mailto:info@devstudio.com" class="login-nav__link--mail">
@@ -62,7 +68,10 @@
           </li>
         </ul>
       </div>
-    </header> -->
+      <div class="mobile-menu" data-menu>
+        <button type="button" data-modal-close class="mobile-menu is-open">close</button>
+      </div>
+    </header>
     <!-- MAIN SECTION-->
 
     <main>
@@ -392,75 +401,77 @@
 
     <!-- FOOOOOOOOTER -->
 
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="footer__address container">
-        <div class="footer_wrapper">
-          <a class="footer__logo" href="/">
-            Web<span class="footer-color white">Studio</span>
+<div class="try-flex">
+  <div class="footer_wrapper">
+    <a class="footer__logo" href="/">
+      Web<span class="footer-color white">Studio</span>
     
-          </a>
-          <address>
-            <ul class="footer__list">
-              <li class="footer__item">
-                <a
-                  class="footer__link"
-                  href="https://goo.gl/maps/xrUxvXRaoUCYZm5W7"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  г. Киев, пр-т Леси Украинки, 26</a
-                >
-              </li>
-              <li class="footer__item">
-                <a
-                  class="footer__link footer__link--secondary"
-                  href="mailto:info@example.com"
-                  >info@example.com</a
-                >
-              </li>
-              <li class="footer__item">
-                <a
-                  class="footer__link footer__link--secondary"
-                  href="tel:+380991111111"
-                  >+38 099 111 11 11</a
-                >
-              </li>
-            </ul>
-          </address>
-        </div>
-        <div class="footer-soc">
-          <h3 class="advantages-title white">присоединяйтесь</h3>
-          <ul class="footer-soc__list">
-            <li class="footer-soc__item">
-              <a class="footer-soc__link" href="">
-                <svg class="footer-soc__icon white" width="20" height="20">
-                  <use href="images/icons.svg#instagram-2"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-soc__item">
-              <a class="footer-soc__link" href="">
-                <svg class="footer-soc-icon white" width="20" height="20">
-                  <use href="images/icons.svg#twitter-1"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-soc__item">
-              <a class="footer-soc__link" href="">
-                <svg class="footer-soc-icon white" width="20" height="20">
-                  <use href="images/icons.svg#facebook-1"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-soc__item">
-              <a class="footer-soc__link" href="">
-                <svg class="footer-soc__icon white" width="20" height="20">
-                  <use href="images/icons.svg#linkedin-1"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
+    </a>
+    <address>
+      <ul class="footer__list">
+        <li class="footer__item">
+          <a
+            class="footer__link"
+            href="https://goo.gl/maps/xrUxvXRaoUCYZm5W7"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            г. Киев, пр-т Леси Украинки, 26</a
+          >
+        </li>
+        <li class="footer__item">
+          <a
+            class="footer__link footer__link--secondary"
+            href="mailto:info@example.com"
+            >info@example.com</a
+          >
+        </li>
+        <li class="footer__item">
+          <a
+            class="footer__link footer__link--secondary"
+            href="tel:+380991111111"
+            >+38 099 111 11 11</a
+          >
+        </li>
+      </ul>
+    </address>
+  </div>
+  <div class="footer-soc">
+    <h3 class="advantages-title white">присоединяйтесь</h3>
+    <ul class="footer-soc__list">
+      <li class="footer-soc__item">
+        <a class="footer-soc__link" href="">
+          <svg class="footer-soc__icon white" width="20" height="20">
+            <use href="images/icons.svg#instagram-2"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="footer-soc__item">
+        <a class="footer-soc__link" href="">
+          <svg class="footer-soc-icon white" width="20" height="20">
+            <use href="images/icons.svg#twitter-1"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="footer-soc__item">
+        <a class="footer-soc__link" href="">
+          <svg class="footer-soc-icon white" width="20" height="20">
+            <use href="images/icons.svg#facebook-1"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="footer-soc__item">
+        <a class="footer-soc__link" href="">
+          <svg class="footer-soc__icon white" width="20" height="20">
+            <use href="images/icons.svg#linkedin-1"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
         <div class="subscribe">
           <p class="subscribe__title white">Подпишитесь на рассылку</p>
           <form class="subscribe__form">
@@ -480,11 +491,11 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
 
     <!-- modal window -->
 
-    <!-- <div class="backdrop is-hidden" data-modal>
+<div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="button--close" type="button" data-modal-close>
           <svg class="icon--close" width="18" height="18">
@@ -546,8 +557,9 @@
           <button class="button--primary" type="submit">Отправить</button>
         </form>
       </div>
-    </div> -->
+    </div>
 
     <script src="./js/modal.js"></script>
+    <script src= "js/mobile-menu.js"></script>
   </body>
 </html>
