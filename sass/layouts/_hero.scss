@@ -1,52 +1,132 @@
 .hero {
-    margin-right: 0;
-    margin-left: 0;
-
+    margin: 0 auto;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
     rgba(47, 48, 58, 0.4)),
-url(../images/team-banner.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-color: #c4c4c4;
-}
+    url(../images/team-banner_mob-min.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+//   background-color: #c4c4c4;
 
-.hero__background {
-    padding: 118px 60px;
+
+    flex-grow: 1;
     text-align: center;
-    @include mq(desc) {
-        padding: 200px 0px;
-    }
+    padding: 200px 0;
+ @include mq (mob){
+     @include retina {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)),
+    url(../images/team-banner_mob-2x-min.jpg);
 }
-
-.hero__title {
-    margin: 0 auto;
-    margin-bottom: 30px;
-
-    font-size: 20px;
-    line-height: 1.62;
-    color: #ffffff;
-    font-weight: 900;
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-
-    @include mq(mob) {
-        font-size: 26px;
-        line-height: 1.62;
-    }
-
-
+ }  
     @include mq(tab) {
-        max-width: 360px;
+        padding: 200px 0;
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)),
+    url(../images/team-banner_tab-min.jpg);
 
+        @include retina {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+            url(../images/team-banner_2x_tab-min.jpg);
+        }
     }
     @include mq(desc) {
-        font-size: 44px;
+        max-width: 1600px;
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)),
+    url(../images/team-banner_desc-min.jpg);
 
-        line-height: 1.36;
-        max-width: 696px;
+        @include retina {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+            url(../images/team-banner_2x_desc-min.jpg);
     }
-  
+    }
+
 }
 
+    // .hero__background {
+    //     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+    //     rgba(47, 48, 58, 0.4)),
+    //     url(../images/team-banner_mob-min.jpg);
+    //     background-repeat: no-repeat;
+    //     background-position: center;
+    //     background-size: cover;
+    // //   background-color: #c4c4c4;
+    
+    
+    //     flex-grow: 1;
+    //     text-align: center;
+    //     padding: 200px 0;
+    //  @include mq (mob){
+    //      @include retina {
+    //     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+    //     rgba(47, 48, 58, 0.4)),
+    //     url(../images/team-banner_mob-2x-min.jpg);
+    // }
+    //  }  
+    //     @include mq(tab) {
+    //         padding: 200px 0;
+    //         background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+    //     rgba(47, 48, 58, 0.4)),
+    //     url(../images/team-banner_tab-min.jpg);
+    
+    //         @include retina {
+    //             background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+    //             rgba(47, 48, 58, 0.4)),
+    //             url(../images/team-banner_2x_tab-min.jpg);
+    //         }
+    //     }
+    //     @include mq(desc) {
+    //         max-width: 1600px;
+    //         background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+    //     rgba(47, 48, 58, 0.4)),
+    //     url(../images/team-banner_desc-min.jpg);
+    
+    //         @include retina {
+    //             background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+    //             rgba(47, 48, 58, 0.4)),
+    //             url(../images/team-banner_2x_desc-min.jpg);
+    //     }
+    //     }
+    // }
+    
+    
+    
+    
+    
+    // .hero__background 
+       
+    
+    .hero__title {
+        margin: 0 auto;
+        margin-bottom: 30px;
+    
+        font-size: 20px;
+        line-height: 1.62;
+        color: #ffffff;
+        font-weight: 900;
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+    
+        @include mq(mob) {
+            font-size: 26px;
+            line-height: 1.62;
+        }
+    
+    
+        @include mq(tab) {
+            max-width: 360px;
+    
+        }
+        @include mq(desc) {
+            font-size: 44px;
+    
+            line-height: 1.36;
+            max-width: 696px;
+        }
+      
+    }
+    

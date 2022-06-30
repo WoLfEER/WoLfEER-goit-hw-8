@@ -25,3 +25,23 @@
     color: #000000;
 }
 
+.logo {
+    display: inline-block;
+  
+    color: var(--accent-color);
+    font-family: $logo-font-family;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.17;
+    @include mq(desc) {
+      font-size: 26px;
+      line-height: 1.19;
+    }
+  }
+  .header__logo {
+    color: #000000;
+  }
+  
+
+  
+

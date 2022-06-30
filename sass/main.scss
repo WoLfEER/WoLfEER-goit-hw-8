@@ -6,8 +6,10 @@
 @import "./base/container";
 @import "./utils/hidden";
 
-
+@import "./layouts/menu-container";
+@import "./components/socials_header";
 @import "./components/header-nav";
+@import "./layouts/header";
 @import "./components/section-title";
 @import "./components/team-card";
 @import "./components/social";
@@ -17,11 +19,11 @@
 @import "./components/button";
 @import "./components/card-image";
 @import "./base/section";
-@import "./components/menu-container";
-@import "./components/socials_header";
 
 
-@import "./layouts/header";
+
+
+
 @import "./layouts/hero";
 @import "./layouts/advantages";
 @import "./layouts/works";

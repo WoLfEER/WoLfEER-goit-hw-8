@@ -18,6 +18,7 @@
     @include mq(desc) {
        display: flex;
     align-items: baseline;
+  
 
 
     }
@@ -41,6 +42,7 @@
     @include mq (desc) {
      margin-right: 70px;
      margin-bottom: 0;
+     text-align: start;
     }
    
 }
